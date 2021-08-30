@@ -1,0 +1,262 @@
+<!doctype html>
+
+<html lang="en">
+
+
+<head>
+
+<!-- META -->
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<!-- PAGE TITLE -->
+<title>Home</title>
+
+<!-- FAVICON -->
+<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+
+<!-- FONTS -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
+<!-- STYLESHEETS -->
+<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+<link rel="stylesheet" type="text/css" href="assets/css/buttons.css">
+
+</head>
+
+
+<body>
+
+
+
+<!-- PRELOADER -->
+<div class="preloader">
+   
+	<div class="spinner"></div>
+	
+</div>
+<!-- /PRELOADER -->
+
+
+
+<!-- NAVIGATION -->
+<nav class="navigation-main">
+
+
+	<!-- CONTAINER FLUID -->
+	<div class="container-fluid">
+
+
+		<!-- NAVIGATION HEADER -->
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#"><img class="img-responsive" src="assets/img/MenuIcon.png" alt="" /></a>
+            <ul class="navigation-items nav navbar-right justify-content-end">
+
+
+				<li class="current"><a href="#intro">Home</a></li>
+				<li><a href="#accidentMap">Accident Map</a></li>
+				<li><a href="#routeCheck">Route Check</a></li>
+				<li><a href="#learnMore">Learn More</a></li>				
+				<li><a href="#aboutUs">About Us</a></li>
+			</ul>
+		</div>
+		<!-- /NAVIGATION HEADER -->
+
+
+		<!-- NAVBAR -->
+		<div id="navbar" class="navbar-collapse collapse">
+
+
+			<!-- MENU ITEMS LIST -->
+			<ul class="navigation-items nav navbar-right">
+
+
+				<li class="current"><a href="#intro">Home</a></li>
+				<li><a href="#accidentMap">Accident Map</a></li>
+				<li><a href="#routeCheck">Route Check</a></li>
+				<li><a href="#learnMore">Learn More</a></li>				
+				<li><a href="#aboutUs">About Us</a></li>
+			</ul>
+			<!-- /MENU ITEMS LIST -->
+
+
+		</div>
+		<!-- /NAVBAR -->
+
+
+	</div>
+	<!-- /CONTAINER FLUID -->
+
+
+</nav>
+<!-- /NAVIGATION -->
+
+
+
+<!-- Home Page -->
+<section id="intro">
+
+
+	<!-- CONTAINER MID -->
+	<div class="container-mid">
+
+
+		<!-- ANIMATION CONTAINER -->
+		<div class="animation-container animation-fade-down" data-animation-delay="0">
+
+			<h1>Trust & Ride</h1>
+			<h2>             Accident Query in Vic</h2>
+			<h3>Enjoy your life slowly, drive your car safety</h3>
+ 
+		<!--Route check square-->
+		<div class="routeCheck">
+
+            <button type="button" class="button button-glow button-rounded button-highlight">Route Check</button>
+		</div>
+	</div>
+	<!-- /CONTAINER MID -->
+
+
+</section>
+<!-- /INTRO -->
+
+
+
+<!-- Accident Map Page -->
+<section id="accidentMap" class="white">
+    
+
+	<!--Left-Search Again-->
+    <div class="square-one">
+		<h1>Search Again</h1>
+		<div class="searchAgain" id="searchButton">
+			<form action="" method="post">
+				<input placeholder="Search again?" name="keyword" type="text">
+				<button type="submit"></button>
+			</form>
+		</div>
+	</div>
+
+	<!--Filter-->
+	<div class="square-two">
+		<div style="display: flex; justify-content: center;">
+			<div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor" class="bi bi-funnel-fill" viewBox="0 0 16 16">
+					<path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2z"/>
+				  </svg>
+			</div>
+			<div>
+				<h1 style="margin-left: 8px; margin-top: 1px;">Filter</h1>
+			</div>
+		</div>
+		<div class="form-group" id="severitySelectContainer">
+			<label for="severitySelect">Severity</label>
+			<select class="form-select" id="severitySelect">
+				<option selected>Select Severity</option>
+				<option value="Non injury">Non injury</option>
+				<option value="Other injury">Other injury</option>
+				<option value="Small injury">Small injury</option>
+				<option value="Serious injury">Serious injury</option>
+				<option value="Fatal accident">Fatal accident</option>
+			</select>
+		</div>
+		<div class="form-group" id="daySelectContainer">
+			<label for="daySelect">Day of Week</label>
+			<select class="form-select" id="daySelect">
+				<option selected>Select Day</option>
+				<option value="Weekday">Weekday</option>
+				<option value="Weekend">Weekend</option>
+			</select>
+		</div>
+		<div class="form-group" id="timeSelectContainer">
+			<label for="timeSelect">Time of Day</label>
+			<select class="form-select" id="timeSelect">
+				<option selected>Select Time</option>
+				<option value="0, 1, 2, 3">0a.m.-4a.m.</option>
+				<option value="4, 5, 6, 7">4a.m.-8a.m.</option>
+				<option value="8, 9, 10, 11">8a.m.-12a.m.</option>
+				<option value="12, 13, 14, 15">12a.m.-4p.m.</option>
+				<option value="16, 17, 18, 19">4p.m.-8p.m.</option>
+				<option value="20, 21, 22, 23">8p.m.-0a.m.</option>
+			</select>
+		</div>
+		<div class="form-group" id="weatherSelectContainer">
+			<label for="weatherSelect">Weather</label>
+			<select class="form-select" id="weatherSelect">
+				<option selected>Select Weather</option>
+				<option value="Sunshine">Sunshine</option>
+				<option value="Rainy">Rainy</option>
+				<option value="Snowy">Snowy</option>
+				<option value="Fog">Fog</option>
+				<option value="Thunderstorm">Thunderstorm</option>
+			</select>
+		</div>
+	</div>
+
+	<!--Route check square-->
+
+</section>
+<!-- /Accident Map -->
+
+<!-- FOOTER -->
+<section id="footer">
+
+   
+	<!-- CONTAINER FLUID -->
+	<div class="container-fluid">
+
+
+		<!-- ROW -->
+		<div class="row">
+
+
+			<!-- COLUMN -->
+			<div class="col-sm-6 scroll-animated-from-bottom text-left">
+
+				<p>Copyright &copy; 2021.Team-Mind Ink Robot.Trust&Ride
+
+			</div>
+			<!-- /COLUMN -->
+
+
+		</div>
+		<!-- ROW -->
+	
+	
+	</div>
+	<!-- /CONTAINER FLUID -->
+
+
+</section>
+<!-- /FOOTER -->
+
+
+
+<!-- BACKGROUND CONTENT -->
+<div class="background-content parallax-on">
+
+
+	<!-- BACKGROUND CONTENT INNER -->
+	<div class="background-content-inner">
+
+		<div class="background-overlay"></div>
+		<div class="background-img layer" data-depth="0.1"></div>
+
+	</div>
+	<!-- /BACKGROUND CONTENT INNER -->
+
+
+</div>
+<!-- /BACKGROUND CONTENT -->
+
+</body> 
+
+<!-- JAVASCRIPTS -->
+<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/js/plugins.js"></script>
+<script type="text/javascript" src="assets/js/main.js"></script>
+
+</html>

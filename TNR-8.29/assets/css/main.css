@@ -1,0 +1,1061 @@
+
+/** 1. Basic(基本）
+*******************************************************************/
+
+html
+{
+    font-size: 10px;
+}
+
+body
+{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+
+    color: #fff;
+    background: #fff;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+h1
+{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 50px;
+
+    color: #FFFFFF;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+h2
+{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 50px;
+
+    color: #FFFFFF;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+h3
+{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+
+    color: #FFFFFF;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.tlinks{text-indent:-9999px;height:0;line-height:0;font-size:0;overflow:hidden;}
+
+a,
+a:hover,
+a:focus
+{
+    cursor: pointer;
+    -webkit-transition: all 300ms ease;
+         -o-transition: all 300ms ease;
+            transition: all 300ms ease;
+    text-decoration: none;
+}
+
+a:hover
+{
+    color: #111;
+}
+
+/** 2. Preloader（载入器）
+*******************************************************************/
+
+.preloader
+{
+    position: fixed;
+    z-index: 100000;
+    bottom: 0;
+    left: 0;
+
+    overflow: hidden;
+
+    width: 100%;
+    height: 100%;
+
+    background: #fff;
+}
+
+.preloader.hide-preloader
+{
+    height: 0;
+    
+    -webkit-transition: .8s ease .3s;
+         -o-transition: .8s ease .3s;
+            transition: .8s ease .3s;
+}
+
+.preloader .spinner
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    display: block;
+
+    width: 50px;
+    height: 50px;
+    margin-top: -25px;
+    margin-left: -25px;
+
+    -webkit-animation: spinner-pulse .6s infinite ease-in-out;
+            animation: spinner-pulse .6s infinite ease-in-out;
+    text-align: center;
+
+    opacity: 1;
+    border-radius: 100%;
+    background-color: #111;
+}
+
+.preloader.hide-preloader .spinner
+{
+    opacity: 0;
+    
+    -webkit-transition: .3s ease;
+         -o-transition: .3s ease;
+            transition: .3s ease;
+}
+
+@-webkit-keyframes spinner-pulse
+{
+    0%
+    {
+        -webkit-transform: scale(0);
+    }
+    100%
+    {
+        -webkit-transform: scale(1.0);
+
+        opacity: 0;
+    }
+}
+
+@keyframes spinner-pulse
+{
+    0%
+    {
+        -webkit-transform: scale(0);
+                transform: scale(0);
+    }
+    100%
+    {
+        -webkit-transform: scale(1.0);
+                transform: scale(1.0);
+
+        opacity: 0;
+    }
+}
+
+
+
+/** 3. Background Content（背景）
+*******************************************************************/
+
+.background-content
+{
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 50%;
+
+    overflow: hidden;
+
+    width: 100%;
+    height: 100%;
+
+    -webkit-transform: translate3d(-50%,0,0) !important;
+            transform: translate3d(-50%,0,0) !important;
+}
+
+.background-content-inner
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 110%;
+    height: 110%;
+
+    -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+}
+
+.background-content .background-img
+{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+/** 4. Navigation（导航）
+*******************************************************************/
+.navigation-main
+{
+    position: fixed;
+    z-index: 100 !important;
+    top: 0;
+
+    width: 100%;
+    height: 75px;
+    padding: 0 30px;
+
+    border-bottom: 1px solid rgba(0,0,0,.12);
+    background: rgba(255, 255, 255, 0);
+    -webkit-box-shadow: 0 0 6px 0 rgba(0,0,0,.14);
+            box-shadow: 0 0 6px 0 rgba(0,0,0,.14);
+}
+
+.navigation-main .container-fluid
+{
+    max-width: 960px;
+}
+
+.navigation-main .navbar-collapse
+{
+    width: 100%;
+}
+
+.navigation-main .navbar-brand
+{
+    padding: 0;
+}
+
+.navigation-main .navbar-brand img
+{
+    position: absolute;
+    top: 50%;
+
+    max-height: 44px;
+    margin: 0;
+    padding: 0;
+
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+
+.navigation-main button
+{
+    font-size: 28px;
+
+    margin-right: 0;
+
+    color: rgb(255, 255, 255);
+}
+
+.navigation-main ul
+{
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.navigation-main ul li a,
+.navigation-main ul li span
+{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 75px;
+
+    display: block;
+
+    margin: -20px;
+    padding: 0 50px;
+
+    cursor: pointer;
+    -webkit-transition: all .1s  linear;
+         -o-transition: all .1s  linear;
+            transition: all .1s  linear;
+    letter-spacing: .096em;
+    text-transform: uppercase;
+
+    color: rgb(255, 255, 255);
+    background: none !important;
+}
+
+.navigation-main ul li a:hover,
+.navigation-main ul li span:hover,
+.navigation-main ul li.current a
+{
+    color: #ff8800;
+}
+
+
+
+/** MEDIA QUERIES（不同媒介的页面大小识别）  **/
+
+@media (max-width: 1000px)
+{
+    .navigation-main ul li a,
+    .navigation-main ul li span
+    {
+        padding: 0 10px;
+    }
+
+    .navigation-main .container-fluid
+    {
+        padding: 0;
+    }
+
+    .navigation-main
+    {
+        padding: 0;
+    }
+
+    .navbar-header
+    {
+        padding: 0 20px;
+    }
+}
+
+@media (min-width: 841px)
+{
+    .navigation-main .dropdown:hover .dropdown-menu
+    {
+        display: block;
+    }
+}
+
+@media (max-width: 840px)
+{
+    .navigation-main
+    {
+        height: 60px;
+    }
+
+    .navbar-header
+    {
+        float: none;
+
+        margin: 0 !important;
+    }
+
+    .navbar-toggle
+    {
+        line-height: 60px;
+
+        display: block;
+
+        margin-top: -4px !important;
+        margin-bottom: 0 !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .navbar-collapse
+    {
+        margin: 0 !important;
+        padding: 0;
+
+        border-top: 1px solid transparent;
+        background: #fff;
+        -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
+                box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
+    }
+
+    .navbar-collapse.collapse
+    {
+        display: none!important;
+    }
+
+    .navbar-nav
+    {
+        float: none!important;
+
+        margin: 7.5px -15px;
+        padding-top: 15px !important;
+        padding-bottom: 26px !important;
+    }
+
+    .navbar-nav > li
+    {
+        float: none;
+    }
+
+    .navbar-nav > li > a
+    {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .navbar-text
+    {
+        float: none;
+
+        margin: 15px 0;
+    }
+
+    .navbar-collapse.collapse.in
+    {
+        display: block !important;
+    }
+
+    .collapsing
+    {
+        overflow: hidden !important;
+    }
+
+    .navigation-main ul li a,
+    .navigation-main ul li span,
+    .navigation-main ul li .dropdown-menu a
+    {
+        line-height: 60px !important;
+
+        padding-left: 40px !important;
+    }
+
+    .navbar-nav .open .dropdown-menu
+    {
+        position: static;
+
+        float: none;
+
+        width: auto;
+        margin-top: 0;
+        padding: 0;
+
+        border: 0;
+        background-color: transparent;
+        -webkit-box-shadow: none;
+                box-shadow: none;
+    }
+
+    .navbar-nav .open .dropdown-menu .dropdown-header,
+    .navbar-nav .open .dropdown-menu > li > a
+    {
+        padding: 0;
+    }
+}
+
+@media (max-height: 840px) and (max-width: 840px)
+{
+    .navigation-main ul li a,
+    .navigation-main ul li span,
+    .navigation-main ul li .dropdown-menu a
+    {
+        line-height: 44px !important;
+    }
+
+    .navigation-main
+    {
+        height: 60px;
+    }
+
+    .navigation-main .navbar-brand img
+    {
+        max-width: 120px;
+    }
+}
+
+@media (max-height: 600px) and (max-width: 840px)
+{
+    .navigation-main ul li a,
+    .navigation-main ul li span,
+    .navigation-main ul li .dropdown-menu a
+    {
+        line-height: 34px !important;
+    }
+}
+
+
+
+/** 5. Section
+*******************************************************************/
+
+section
+{
+    position: relative;
+
+    margin: 0 auto;
+    padding: 16rem 0;
+
+    background: rgba(45, 45, 45, 0);
+}
+
+section.white
+{
+    position: relative;
+
+    background: rgba(255, 255, 255, 0.664);
+}
+
+section.white h1
+{
+font-family: Roboto;
+font-style: normal;
+font-weight: 900;
+font-size: 22px;
+color: #FFFFFF;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+line-height: 16px;
+margin-top: 15px;
+}
+
+section.white h2
+{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    line-height: 10px;   
+}
+section.white h3
+{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 50px;
+
+    color: #000000;
+
+    text-shadow: 0px 4px 4px rgb(124, 124, 124);
+}
+
+section.white h4,
+section.white h5,
+section.white h6
+{
+    color: rgb(0, 0, 0);
+}
+
+section.white p,
+section.white a,
+section.white span
+{
+    color: #333;
+}
+
+section:last-of-type
+{
+    padding-bottom: 20rem;
+}
+
+section .container-fluid
+{
+    max-width: 980px;
+}
+
+section .headline
+{
+    line-height: 1.4em;
+
+    margin-top: 0;
+    margin-bottom: .9em;
+}
+
+@media (max-width:768px)
+{
+    section .headline br
+    {
+        display: none;
+    }
+}
+
+
+
+/** 6. Section --> Intro
+*******************************************************************/
+
+#intro
+{
+    position: relative;
+
+    height: 100vh;
+}
+
+#intro .container-mid
+{
+    position: absolute;
+
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+
+#intro .container-mid h1
+{
+    position: absolute;
+    width: 838px;
+    height: 153px;
+    left: 500px;
+    top: 55px;
+}
+
+#intro .container-mid h2
+{
+    position: absolute;
+    width: 838px;
+    height: 153px;
+    left: 600px;
+    top: 135px;
+}
+
+#intro .container-mid h3
+{
+    position: absolute;
+    width: 838px;
+    height: 153px;
+    left: 600px;
+    top: 215px;
+}
+
+#intro .container-mid.search
+{
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+input::-webkit-input-placeholder {
+    color: #ffffffb0;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+}
+form {
+    position: relative;
+    left: 900px;
+    top: 180px;
+    width: 350px;
+    margin: 0 auto;
+}
+
+input,button {
+    border:none;   
+    outline: none;  
+}
+
+.search input {
+    width: 100%;
+    height: 42px;
+    padding-left: 13px;
+    border: 2px solid #ffffff;
+    border-radius: 19px;
+    background: #ffffff60;
+}
+
+.search button {
+    height: 42px;
+    width: 80px;
+    cursor: pointer;
+    position: absolute;
+    background: #ffffff;
+    border-radius: 0 19px 19px 0;
+    width: 100px;
+    right: 0;
+}
+.search button:hover {
+    background-color: #636363c7;
+}
+.search button:before {
+    content: "SEARCH";
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    color: #ff8800;
+}
+
+#intro .routeCheck
+{
+    position: absolute;
+    left: 250px;
+    top: 430px;
+    border-radius: 30px 30px 0 0;
+    border: 1px solid rgb(170, 170, 170);
+    background: rgba(255, 255, 255, 0.664);
+    padding: 20px; 
+    width: 1050px;
+    height: 132px;
+}
+
+.routeCheck button
+{
+    font-size: 18px;
+    position: relative;
+    left: 800px;
+    top: 50px;
+}
+
+#intro .animation-container
+{
+    -webkit-transition: .5s ease;
+         -o-transition: .5s ease;
+            transition: .5s ease;
+}
+
+#intro .animation-container.animation-fade
+{
+    opacity: 0;
+}
+
+#intro .animation-container.animation-fade.run-animation
+{
+    opacity: 1;
+}
+
+#intro .animation-container.animation-fade-up
+{
+    -webkit-transform: translateY(10vh);
+        -ms-transform: translateY(10vh);
+            transform: translateY(10vh);
+
+    opacity: 0;
+}
+
+#intro .animation-container.animation-fade-up.run-animation
+{
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
+
+    opacity: 1;
+}
+
+#intro .animation-container.animation-fade-down
+{
+    -webkit-transform: translateY(-10vh);
+        -ms-transform: translateY(-10vh);
+            transform: translateY(-10vh);
+
+    opacity: 0;
+}
+
+#intro .animation-container.animation-fade-down.run-animation
+{
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
+
+    opacity: 1;
+}
+
+#intro .animation-container.animation-fade-left
+{
+    -webkit-transform: translateX(10vh);
+        -ms-transform: translateX(10vh);
+            transform: translateX(10vh);
+
+    opacity: 0;
+}
+
+#intro .animation-container.animation-fade-left.run-animation
+{
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+
+    opacity: 1;
+}
+
+#intro .animation-container.animation-fade-right
+{
+    -webkit-transform: translateX(-10vh);
+        -ms-transform: translateX(-10vh);
+            transform: translateX(-10vh);
+
+    opacity: 0;
+}
+
+#intro .animation-container.animation-fade-right.run-animation
+{
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+
+    opacity: 1;
+}
+
+@media (max-width:1200px)
+{
+    #intro
+    {
+        height: auto;
+    }
+
+    #intro .container-mid
+    {
+        position: relative;
+        top: 0;
+
+        margin: 15vh 0;
+
+        -webkit-transform: translate(0);
+            -ms-transform: translate(0);
+                transform: translate(0);
+    }
+}
+
+
+
+/** 7. Section --> AccidentMap
+*******************************************************************/
+#accidentMap
+{
+    position: relative;
+
+    height: 100vh;
+}
+
+#accidentMap .square-one 
+{
+    position: absolute;
+    left: 15px;
+    top: 95px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    background: #565E64;
+    padding: 20px; 
+    width: 200px;
+    height: 150px;
+    text-align: center;
+}
+
+.searchAgain input::-webkit-input-placeholder {
+    color: #ffffffb0;
+    font-size: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+}
+
+
+.searchAgain form {
+    position: relative;
+    left: -5px;
+    top: 10px;
+    width: 170px;
+    margin: 0 auto;
+}
+
+.searchAgain input,button {
+    border:none;   
+    outline: none;  
+}
+
+.searchAgain input {
+    width: 100%;
+    height: 30px;
+    padding-left: 13px;
+    border: 2px solid #ffffff;
+    border-radius: 19px;
+    background: #ffffff60;
+    margin-top: 10px;
+}
+
+.searchAgain button {
+    height: 30px;
+    width: 55px;
+    cursor: pointer;
+    position: absolute;
+    background: #ffffff;
+    border-radius: 0 19px 19px 0;
+    right: 0;
+    margin-top: 10px;
+}
+.searchAgain button:hover {
+    background-color: #636363c7;
+}
+.searchAgain button:before {
+    content: "SEARCH";
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    color: #ff8800;
+}
+
+#accidentMap .square-two 
+{
+    position: absolute;
+    left: 15px;
+    top: 260px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    background: #565E64;
+    padding: 20px; 
+    width: 200px;
+    height: 400px;
+    text-align: center;
+}
+
+#severitySelectContainer {
+    margin-top: 20px;
+    
+}
+#severitySelectContainer label {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+#severitySelect {
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 15px;
+    margin-top: 8px;
+}
+
+#daySelectContainer {
+    margin-top: 8px;
+    
+}
+#daySelectContainer label {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+#daySelect {
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 15px;
+    margin-top: 8px;
+}
+
+#timeSelectContainer {
+    margin-top: 8px;
+    
+}
+#timeSelectContainer label {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+#timeSelect {
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 15px;
+    margin-top: 8px;
+}
+
+#weatherSelectContainer {
+    margin-top: 8px;
+    
+}
+#weatherSelectContainer label {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+#weatherSelect {
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 15px;
+    margin-top: 8px;
+}
+
+/** 8. Section --> routeCheck
+*******************************************************************/
+
+
+/** 9. Section --> FAQ
+*******************************************************************/
+
+
+/** 10. Section --> team
+*******************************************************************/
+#team .subline
+{
+    max-width: 77%;
+    margin: 0 auto 2em auto;
+}
+
+#team .about-item
+{
+    padding-right: 24px;
+    padding-left: 24px;
+}
+
+#team .about-item img
+{
+    margin-top: 1.8em;
+}
+
+#team .about-item p
+{
+    margin-top: 1.8em;
+    margin-bottom: 0;
+}
+
+@media (max-width:768px)
+{
+    #team .subline
+    {
+        max-width: 640px;
+    }
+
+    #team .about-item img
+    {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    #team .about-item p
+    {
+        max-width: 640px;
+        margin-right: auto;
+        margin-left: auto;
+
+        text-align: center;
+    }
+}
+
+/** 12. Section --> Footer
+*******************************************************************/
+
+#footer
+{
+    position: relative;
+
+    overflow: hidden;
+
+    margin: 0 auto;
+    padding: 6rem 0;
+}
+
+#footer p
+{
+    line-height: 6rem;
+
+    margin: 0;
+}
+
+#footer p a
+{
+    font-weight: 400;
+
+    color: inherit;
+}
