@@ -1,0 +1,59 @@
+body{ 
+	margin: 0; 
+	padding: 0; 
+}
+#map{ 
+	position: absolute; 
+	top: 0; 
+	bottom: 0; 
+	width: 100%; 
+}
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:90%;
+	right:40px;
+	background-color:rgb(0, 0, 0);
+	color:rgb(255, 255, 255);
+	border-radius:50px;
+	text-align:center;
+}
+.my-float{
+	margin-top:22px;
+}
+.mapboxgl-popup-content {
+  background-color:rgba(0, 0, 0, 0.61);
+  font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', sans-serif;
+  color:rgb(255, 255, 255);
+  padding: 0;
+  width: 180px;
+}
+
+.mapboxgl-popup-content h3 {
+  background: #fdfdfd;
+  color: #000;
+  margin: 0;
+  padding: 10px;
+  border-radius: 3px 3px 0 0;
+  font-weight: 500;
+  margin-top: -20px;
+}
+
+.mapboxgl-popup-content h4 {
+  margin: 0;
+  padding: 10px;
+  font-weight: 400;
+}
+
+.mapboxgl-popup-content div {
+  padding: 10px;
+}
+
+.mapboxgl-popup-anchor-top > .mapboxgl-popup-content {
+  margin-top: 15px;
+}
+
+.mapboxgl-popup-anchor-top > .mapboxgl-popup-tip {
+  border-bottom-color: #91c949;
+}
