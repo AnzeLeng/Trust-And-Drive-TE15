@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset='utf-8' />
+		<title>Trust & Drive-Accident Map</title>
+		<meta name='viewport' content='width=device-width, initial-scale=1' />
+		<!-- Favicon-->
+		<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+		<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js'></script>
+		<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css' rel='stylesheet' />
+		<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.min.js"></script>
+		<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.css" type="text/css">
+		<link rel="stylesheet" href="css/mapbox.css" />
+		<!-- <link rel="stylesheet" href="assets/css/fontawesome-all.min.css"> -->
+		<script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+		<script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<div id='map'></div>
+		<a href="index.html" class="float">
+			<i class="fa fa-times my-float"></i>
+		</a>
+		<div class="filter-content">
+			<div class="dropdown">
+				<button onclick="severity()" class="dropbtnseverity">Severity</button>
+				<div id="myDropdown" class="dropdown-content"></div>
+			</div>
+			<div class="dropdownTime">
+				<button onclick="time()" class="dropbtntime">Time of Day</button>
+				<div id="dropdownTime" class="dropdown-content-time"></div>
+			</div>
+			<div class="dropdownDay">
+				<button onclick="day()" class="dropbtnday">Day of Week</button>
+				<div id="dropdownDay" class="dropdown-content"></div>
+			</div>
+			<h4>Filters</h4>
+		</div>
+
+	</body>
+	<script src="js/mapbox.js"></script>
+</html>
