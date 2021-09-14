@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset='utf-8' />
+		<title>Trust & Drive-Accident Map</title>
+		<meta name='viewport' content='width=device-width, initial-scale=1' />
+		<!-- Favicon-->
+		<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+		<!-- Mapbox GL JS -->
+		<script src=https://api.tiles.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js></script>
+		<link href=https://api.tiles.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css rel="stylesheet" />
+
+		<!-- Mapbox GL Directions -->
+		<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
+		<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css" type="text/css">
+
+		<!-- Turf & Polyline -->
+		<script src="https://npmcdn.com/@turf/turf/turf.min.js"></script>
+		<script src=https://cdnjs.cloudflare.com/ajax/libs/mapbox-polyline/1.1.1/polyline.js></script>
+
+		<link rel="stylesheet" href="css/mapboxRoute.css" />
+		<script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<div id='map'></div>
+		<a href="index.html" class="float">
+			<i class="fa fa-times my-float"></i>
+		</a>
+		<div class="sidebar">
+			<div class="heading">
+				<h1>Routes</h1>
+			</div>
+			<div id="reports" class="reports"></div>
+		</div>
+	</body>
+	<script src="js/mapboxRoute.js"></script>
+</html>
