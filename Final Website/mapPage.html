@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset='utf-8' />
+		<title>Trust & Drive-Accident Map</title>
+		<meta name='viewport' content='width=device-width, initial-scale=1' />
+		<!-- Favicon-->
+		<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+		<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js'></script>
+		<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css' rel='stylesheet' />
+		<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.min.js"></script>
+		<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.css" type="text/css">
+		<link rel="stylesheet" href="css/mapbox.css" />
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+		<!-- <link rel="stylesheet" href="assets/css/fontawesome-all.min.css"> -->
+		<script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+		<script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<div id='map'>
+	    </div>
+		<div class="topRButton">
+			<a class="topRButtonOne" onclick="location='index.html';return false" href="index.html"><span class="glyphicon glyphicon-chevron-left"></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HOME PAGE</a>
+			<a class="topRButtonTwo" onclick="location='routePage.html';return false" href="routePage.html">ROUTE CHECK <span class="glyphicon glyphicon-chevron-right"></span></a>
+			<a class="topRButtonThree" onclick="location='learnMorePage.html';return false" href="learnMorePage.html">LEARN MORE &nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a>
+		</div>
+		<div class="filter-content" style="text-align:center;">
+			<div class=icon>
+			    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" color="white" fill="currentColor" class="bi bi-funnel" viewBox="0 0 16 16">
+				<path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2h-11z"/>
+			    </svg>
+			    <h10 class="align-middle">Filters</h10>
+		    </div>
+			<div class="dropdown">
+				<button onclick="severity()" class="dropbtnseverity"><span class="glyphicon glyphicon-chevron-down"></span> Acc Severity</button>
+				<div id="myDropdown" class="dropdown-content"></div>
+			</div>
+			<div class="dropdownTime">
+				<button onclick="time()" class="dropbtntime"><span class="glyphicon glyphicon-chevron-down"></span> Time of Day</button>
+				<div id="dropdownTime" class="dropdown-content-time"></div>
+			</div>
+			<div class="dropdownDay">
+				<button onclick="day()" class="dropbtnday"><span class="glyphicon glyphicon-chevron-down"></span> Day of Week</button>
+				<div id="dropdownDay" class="dropdown-content-day"></div>
+			</div>
+		</div>
+
+	</body>
+	<script src="js/mapbox.js"></script>
+</html>

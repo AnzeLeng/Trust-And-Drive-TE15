@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset='utf-8' />
+		<title>Trust & Drive-Route Page</title>
+		<meta name='viewport' content='width=device-width, initial-scale=1' />
+		<!-- Favicon-->
+		<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+		<!-- Mapbox GL JS -->
+		<script src=https://api.tiles.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js></script>
+		<link href=https://api.tiles.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css rel="stylesheet" />
+
+		<!-- Mapbox GL Directions -->
+		<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
+		<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css" type="text/css">
+
+		<!-- Turf & Polyline -->
+		<script src="https://npmcdn.com/@turf/turf/turf.min.js"></script>
+		<script src=https://cdnjs.cloudflare.com/ajax/libs/mapbox-polyline/1.1.1/polyline.js></script>
+
+		<link rel="stylesheet" href="css/mapboxRoute.css" />
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<div id='map'></div>
+		<div class="topRButton">
+			<a class="topRButtonOne" onclick="location='index.html';return false" href="index.html"><span class="glyphicon glyphicon-chevron-left"></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HOME PAGE</a>
+			<a class="topRButtonTwo" onclick="location='mapPage.html';return false" href="mapPage.html"><span class="glyphicon glyphicon-chevron-left"></span> ACCIDENT MAP</a>
+			
+		</div>
+		<div class="sidebar">
+			<div class="heading">
+				<h1>Routes</h1>
+			</div>
+			<div id="reports" class="reports"></div>
+		</div>
+		<div class="leftDownPart">
+			<p>Route You Might Like</p>
+			<button id="GOR" type="button" class="likeButton" style="background-color:rgba(7, 100, 240, 0.568)">Great Ocean Road</button>
+			<button id="MD" type="button" class="likeButton" style="background-color:rgba(255, 19, 19, 0.555)">Mount Dandenong</button>
+			<button id="PI" type="button" class="likeButton" style="background-color:rgba(255, 231, 19, 0.555)">Phillip Island</button>
+			<button type="button" class="likeButton" style="background-color:rgba(27, 236, 135, 0.521)" onclick="location='learnMorePage.html';return false" href="learnMorePage.html">Safe Driving Tips <span class="glyphicon glyphicon-share-alt"></span></button>
+		</div>
+		<div class="pointExp">
+			<div class="circle"></div>
+			<h11>Based on accident records & algorithmic analysis.</h11>
+		</div>
+	</body>
+	<script src="js/mapboxRoute.js"></script>
+</html>
